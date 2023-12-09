@@ -30,13 +30,13 @@ title('Grayscale Image');
 
 % Set a threshold value (adjust as needed)
 threshold_value = 128;
+% Apply thresholding
+binary_img = gray_img > threshold_value;
 % Thresholded Image
 figure;
 imshow(binary_img);
 title('Thresholded Image');
 
-% Apply thresholding
-binary_img = gray_img > threshold_value;
 
 % Compute min and max pixel values for contrast stretching
 min_val = min(gray_img(:));
