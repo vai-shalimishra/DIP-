@@ -43,10 +43,10 @@ min_val = min(gray_img(:));
 max_val = max(gray_img(:));
 
 % Perform contrast stretching
-contr_stretch_img = uint8((double(gray_img) - min_val) / (max_val - min_val) * 255);
+contr_stretch_img = 255 * ((double(image) - min_val) / (max_val - min_val));;;
 % Contrast-Stretched Image
 figure;
-imshow(contr_stretch_img);
+imshow(uint8(contr_stretch_img));
 title('Contrast-Stretched Image');
 
 
